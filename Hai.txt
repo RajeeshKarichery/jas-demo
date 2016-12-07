@@ -2,4 +2,7 @@ class Test{
 	func getStudentName(){
 		return "name"
 	}
+	func getStudentId(){
+		return "id"
+	} 
 }
