@@ -1,8 +1,9 @@
 class Test{
+	// am master
 	func getStudentName(){
 		return "sname"
 	}
 	func getStudentId(){
-		return "id"
+		return "id" 
 	} 
 }
