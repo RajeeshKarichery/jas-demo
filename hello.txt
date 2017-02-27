@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Notification Types</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="demonstration of some noty capabilities">
+    
+
+    <!--<link rel="stylesheet" href="../dist/bootstrap.min.css">-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	
+	
+	<style>
+	
+	
+	
+	
+	
+	.tabs {
+			position: relative;
+			overflow: hidden;
+			margin: 0 auto;
+			width: 100%;
+			font-weight: 300;
+			font-size: 1.25em;
+		}
+
+
+		.tabs nav {
+			text-align: center;
+		}
+		.tab-content{
+				border-left: 1px solid #ddd;
+				border-right: 1px solid #ddd;
+				border-bottom: 1px solid #ddd;
+				border-radius: 0px 0px 5px 5px;
+				padding: 10px;
+		}
+		
+		.tabs nav ul {
+	position: relative;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: flex;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1200px;
+	list-style: none;
+	-ms-box-orient: horizontal;
+	-ms-box-pack: center;
+	-webkit-flex-flow: row wrap;
+	-moz-flex-flow: row wrap;
+	-ms-flex-flow: row wrap;
+	flex-flow: row wrap;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+}
+
+.tabs nav ul li {
+	position: relative;
+	z-index: 1;
+	display: block;
+	margin: 0;
+	text-align: center;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+	-ms-flex: 1;
+	flex: 1;
+}
+
+.tabs nav a {
+	position: relative;
+	display: block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 2.5;
+}
+
+.tabs nav a span {
+	vertical-align: middle;
+	font-size: 0.75em;
+}
+
+.tabs nav li.tab-current a {
+	color: #74777b;
+}
+
+.tabs nav a:focus {
+	outline: none;
+}
+	
+	
+	
+	.nav-tabs { 
+		border-bottom: 2px solid #DDD;
+	}
+    .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+		border-width: 0; 
+	}
+    .nav-tabs > li > a { border: none; color: #666; }
+    .nav-tabs > li.active > a, .nav-tabs > li > a:hover { 
+		border: none;
+		color: #4285F4 !important; 		
+		background: transparent; 
+	}
+    .nav-tabs > li > a::after {
+		content: ""; background: #4285F4;
+		height: 4px; 
+		position: absolute; 
+		width: 100%; 
+		left: 0px; 
+		bottom: -1px; 
+		transition: all 250ms ease 0s; 
+		transform: scale(0);
+	}
+    .nav-tabs > li.active > a::after, .nav-tabs > li:hover > a::after { 
+		transform: scale(1); 
+	}
+	.tab-nav > li > a::after { 
+		background: #21527d none repeat scroll 0% 0%; color: #fff;
+	}
+	.tab-pane {
+		padding: 15px 0;
+	}
+	.tab-content{
+		padding:20px
+	}
+
+		
+		
+	</style>
+	
+	
+	<script src="../dist/jquery.min.js"></script>
+	<script src="../dist/bootstrap.min.js"></script>	
+	
+    
+</head>
+<body>
+			
+		
+
+
+	<div class="container">									
+			<div class="tabs">	
+				<nav>
+					<ul class="nav nav-tabs" role="tablist">
+						<li  class="active"><a href="#home"  data-toggle="tab">Home</a></li>
+						<li><a href="#profile"   data-toggle="tab">Profile</a></li>
+						<li><a href="#messages"  data-toggle="tab">Messages</a></li>
+						<li ><a href="#settings" class="glyphicon glyphicon-home"  data-toggle="tab"> Settings</a></li>
+					</ul>
+				</nav>								
+				<div class="tab-content">
+					<div  class="tab-pane active" id="home">111111111.</div>
+					<div  class="tab-pane" id="profile">AAAA.</div>
+					<div  class="tab-pane" id="messages">BBNBB.</div>
+					<div  class="tab-pane" id="settings">CCCC .</div>
+				</div>
+			</div>
+	</div>
+		
+		
+    <script type="text/javascript">   
+        $(document).ready(function (){
+		
+			/*$(".nav-tabs a").click(function(e){
+                $(this).tab('show');
+            });*/
+					
+			
+			//$('.nav li').not('.active').addClass('disabled');
+            //$('.nav li').not('.active').find('a').removeAttr("data-toggle");
+
+            $(".nav").on('click', "li.disabled a", function(event) {
+                event.stopImmediatePropagation();	
+				//$('.nav li:eq(2) a').attr("data-toggle","tab");				
+                return false;
+            });
+				
+			
+						
+		      
+		});//document close
+		
+	</script>
+
+
+</body>
+
+
+
+
+</html>
